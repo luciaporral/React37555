@@ -1,14 +1,9 @@
-import './App.css';
 import Box from '@mui/material/Box'
 import * as React from 'react';
 import Button from '@mui/material/Button';
 
-function App() {
-  return (
-
-    <div className="App">
-          <header>
-            <Box className="App-Box"
+const NavBar = () =>{
+<Box className="App-Box"
             sx={{
         width: "auto",
         height: 100,
@@ -23,10 +18,4 @@ function App() {
         <button href='/'>Contact</button>
         </div>
             </Box>
-          </header>
-        App
-    </div>
-  );
-}
-
-export default App;
+};export default NavBar
