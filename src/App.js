@@ -1,30 +1,18 @@
 import './App.css';
-import Box from '@mui/material/Box'
+import NavBar from './components/NavBar';
 import * as React from 'react';
-import Button from '@mui/material/Button';
+import ItemListContainer from './components/ItemListContainer';
+import ItemCount from './components/ItemCount'
 
 function App() {
   return (
 
     <div className="App">
-          <header>
-            <Box className="App-Box"
-            sx={{
-        width: "auto",
-        height: 100,
-        backgroundColor: 'primary.dark',
-        
-      }}>
-        <h1>Tienda Mascotitas</h1>
-        <div>
-        <button href='/'>Home</button>
-        <button href='/'>Products</button>
-        <button href='/'>About</button>
-        <button href='/'>Contact</button>
-        </div>
-            </Box>
-          </header>
-        App
+        <header>
+          <NavBar/>
+        </header>
+        <ItemListContainer/>
+        <ItemCount/>
     </div>
   );
 }
