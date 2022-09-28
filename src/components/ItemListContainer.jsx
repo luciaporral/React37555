@@ -1,5 +1,22 @@
+import getItems from "../mockAPI";
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList"
+
 const ItemListContainer =() =>{
+
+    const [data, setData] = useState([])
+
+    useEffect(
+        () =>{
+            getItems().then((infoProd) =>{
+                setData(infoProd)
+            })
+        }
+    )
+
     return(
-        <h1>Hello World</h1>
+        <div>
+            <ItemList data={data}/>
+        </div>
     )
 }; export default ItemListContainer
