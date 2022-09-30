@@ -1,18 +1,24 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import * as React from 'react';
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount'
-
+import PetListContainer from './components/PetListContainer';
+import { BrowserRouter , Route, Routes} from 'react-router-dom';
+import PetDetailContainer from './components/PetDetailContainer'
 function App() {
   return (
 
     <div className="App">
-        <header>
+        <BrowserRouter>
           <NavBar/>
-        </header>
-        <ItemListContainer/>
-        <ItemCount/>
+          <Routes>
+            <Route path="/" element={
+              <PetListContainer/>
+            }/>
+            <Route path="/adoption" element={
+              <PetDetailContainer/>
+            }/>
+          </Routes>
+        </BrowserRouter>
     </div>
   );
 }

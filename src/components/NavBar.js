@@ -1,7 +1,8 @@
 import Box from '@mui/material/Box'
 import * as React from 'react';
-import CartWidget from './CartWidget'
+import PetsIcon from './PetsIcon'
 import '../App.css';
+import {Link} from 'react-router-dom';
 
 
 const NavBar = () =>{
@@ -13,13 +14,13 @@ const NavBar = () =>{
         height: 100,
         backgroundColor: 'primary.dark',
         }}>
-                <h1>Tienda Mascotitas</h1>
+                <h1>Bigotes Felices</h1>
                 <div>
-                        <button href='/'>Home</button>
-                        <button href='/'>Products</button>
+                        <Link to='/'>Home</Link>
+                        <Link to='/adoption'>Animales</Link>
                         <button href='/'>About</button>
                         <button href='/'>Contact</button>
-                        <CartWidget/>
+                        <PetsIcon/>
                 </div>
                         
         </Box>

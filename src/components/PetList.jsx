@@ -1,11 +1,12 @@
 import React from "react";
-import Item from "./Item";
+import Pet from "./Pet";
 
-const ItemList =(props) =>{
+const PetList =(props) =>{
 
 
     return(
-        <div>
+        <div>PetList</div>
+ /*       <div>
             {props.data.map((item) => {
                 return(
                     <Item
@@ -17,5 +18,6 @@ const ItemList =(props) =>{
                 )
             })}
         </div>
+        */
     )
-}; export default ItemList
+}; export default PetList
