@@ -1,5 +1,7 @@
+import ItemCount from "./ItemCount"
+
 const PetListContainer = () =>{
     return(
-        <div>Hello World</div>
+        <div><ItemCount/></div>
     )
 };export default PetListContainer
