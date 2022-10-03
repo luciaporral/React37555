@@ -1,20 +1,5 @@
-
-const PetListContainer =() =>{
-
-    /*const [data, setData] = useState([])
-
-    useEffect(
-        () =>{
-            getItems().then((infoProd) =>{
-                setData(infoProd)
-            })
-        }
-    )
-    <ItemList data={data}/>
-*/
+const PetListContainer = () =>{
     return(
-        <div>
-            PetListContainer
-        </div>
+        <div>Hello World</div>
     )
-}; export default PetListContainer
+};export default PetListContainer

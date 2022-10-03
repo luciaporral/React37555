@@ -16,8 +16,8 @@ const NavBar = () =>{
         }}>
                 <h1>Bigotes Felices</h1>
                 <div>
-                        <Link to='/'>Home</Link>
-                        <Link to='/adoption'>Animales</Link>
+                        <button href='/'>Home</button>
+                        <button href='/'>Animales</button>
                         <button href='/'>About</button>
                         <button href='/'>Contact</button>
                         <PetsIcon/>
