@@ -1,7 +1,7 @@
 import { useState } from "react";
+import CounterButton from "./Button"
 
-
-const ItemCount=()=>{
+const ItemCount=(props,onAddToCart )=>{
     const [itemNumber, setItemNumber] = useState(0);
     const [stock, setStock] = useState(10);
 
@@ -26,8 +26,11 @@ const ItemCount=()=>{
         <div>
           Current amount: {itemNumber}
           <div>
-          <button onClick={increaseHandler}>+</button>
-          <button onClick={decreaseHandler}>-</button>
+          <CounterButton onClick={increaseHandler}>+</CounterButton>
+          <CounterButton onClick={decreaseHandler}>-</CounterButton>
+          </div>
+          <div>
+          <button onClick={()=> onAddToCart()}>Agregar al carrito</button>
           </div>
         </div>
       );
