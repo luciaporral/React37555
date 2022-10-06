@@ -3,6 +3,7 @@ import * as React from 'react';
 import PetsIcon from './PetsIcon'
 import '../App.css';
 import {Link} from 'react-router-dom';
+import ThemedButton from './ThemeButton';
 
 
 const NavBar = () =>{
@@ -22,6 +23,9 @@ const NavBar = () =>{
                         <button href='/'>Contact</button>
                         <PetsIcon/>
                 </div>
+                <span style={{position:"absolute", right:"1em"}}>
+                        <ThemedButton/>
+                </span>
                         
         </Box>
         )
