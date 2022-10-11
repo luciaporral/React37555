@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-const PetDetail=(props)=>{
+const PetDetail=()=>{
 
     function handleAddToCart(){
         alert("Agregaste al carrito")
@@ -29,7 +29,7 @@ const PetDetail=(props)=>{
                     <Typography variant="body2">
                     xxxx
                     </Typography>
-                    <ItemCount onClick={handleAddToCart()}/>
+                    <ItemCount onAddToCart={handleAddToCart}/>
                 </CardContent>
             </Card>
         </div>

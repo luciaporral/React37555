@@ -30,7 +30,7 @@ const ItemCount=(props,onAddToCart )=>{
           <CounterButton onClick={decreaseHandler}>-</CounterButton>
           </div>
           <div>
-          <button onClick={()=> onAddToCart()}>Agregar al carrito</button>
+          <button onClick={()=> props.onAddToCart()}>Agregar al carrito</button>
           </div>
         </div>
       );
