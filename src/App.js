@@ -6,6 +6,8 @@ import PetDetail from "./components/PetDetail"
 import { ActiveThemeProvider } from './context/theme-context';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import AppWrapper from "./App"
+import { Loader } from './components/Loader';
+  
 function App() {
 
   const darkTheme = createTheme({
@@ -13,16 +15,26 @@ function App() {
       mode: 'dark',
     },
   });
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(()=>{
+    setTimeout(() => setLoading(false), 1000)
+  },[])
 
   return (
-    <ActiveThemeProvider>
+    <>
+    {loading ? 
+    (<Loader/>)
+    :
+    (<ActiveThemeProvider>
     <AppWrapper>
     <div className="App">
         <NavBar/>
         <PetListContainer/>
     </div>
     </AppWrapper>
-    </ActiveThemeProvider>
+    </ActiveThemeProvider>)}
+    </>
   );
 }
 
